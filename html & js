@@ -1,0 +1,14 @@
+<img src="https://kairos.moudania.com/nea-moudania/webcam.jpg" id="moudania" alt="image"  loading="lazy"  >
+
+
+
+<script>window.onload = function() {
+    var image = document.getElementById("moudania");
+
+    function updateImage() {
+        image.src = image.src.split("?")[0] + "?" + new Date().getTime();
+    }
+
+    setInterval(updateImage, 10000);
+}
+</script>
